@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Predictor of Hyderabad</title>
+ 
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+p{
+    text-align: center;
+
+}
+form {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #0088ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0900b3;
+}
+.output {
+    text-align: center;
+    color: #333;
+
+}
+</style>
+<body>
+    <h1>Hyderabad House Forecast</h1>
+    <p>This is a Random Forest based ML model having<br> r-squared score of ~0.70</p>
+    <p>Predict the price of a home based on Location and Sqft (2021 data)</p>
+    <form action="/predict" method="post">
+
+        <label for="location">Location:</label>
+        <select id="location" name="location">
+            <option value="0">Alkapur Township, Manikonda, Outer Ring Road</option>
+            <option value="1">Aminpur</option>
+            <option value="2">Attapur</option>
+            <option value="3">Bachupally</option>
+            <option value="4">Bandlaguda Jagir</option>
+            <option value="5">Beeramguda, Ramachandra Puram, NH 9</option>
+            <option value="6">Boduppal, NH 22</option>
+            <option value="7">Chandanagar, NH 9</option>
+            <option value="8">Dammaiguda</option>
+            <option value="9">Gachibowli</option>
+            <option value="10">Gajularamaram</option>
+            <option value="11">Hafeezpet, NH 9</option>
+            <option value="12">Kokapet, Outer Ring Road</option>
+            <option value="13">Kollur, Outer Ring Road</option>
+            <option value="14">Kompally</option>
+            <option value="15">Kondapur</option>
+            <option value="16">Kukatpally, NH 9</option>
+            <option value="17">LB Nagar, NH 9</option>
+            <option value="18">Madhapur</option>
+            <option value="19">Madinaguda, Hafeezpet, NH 9</option>
+            <option value="20">Mallampet, Outer Ring Road</option>
+            <option value="21">Manikonda, Outer Ring Road</option>
+            <option value="22">Miyapur, NH 9</option>
+            <option value="23">Nagaram</option>
+            <option value="24">Nagole</option>
+            <option value="25">Nallagandla, Serilingampally</option>
+            <option value="26">Narsingi, Outer Ring Road</option>
+            <option value="27">Nizampet</option>
+            <option value="28">Patancheru</option>
+            <option value="29">Pragathi Nagar, Kukatpally</option>
+            <option value="30">Puppalaguda</option>
+            <option value="31">Rajendra Nagar, Outer Ring Road</option>
+            <option value="32">Shamirpet</option>
+            <option value="33">Tellapur, Outer Ring Road</option>
+            <option value="34">Toli Chowki</option>
+            <option value="35">Uppal, NH 22</option>
+        </select>
+        <br><br>
+        <label for="sqft">Sqft:</label>
+        <input type="text" id="sqft" name="sqft"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    <br>
+    <br>
+    <p class="output"> {{ prediction_text }} </p>
+</body>
+</html>
