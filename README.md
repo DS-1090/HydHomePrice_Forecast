@@ -6,6 +6,7 @@ Has r2 score of ~0.70
 Run hyd_mega.ipynb for training the model
 
 Tech Stack: Flask, HTML, CSS, Numpy, Pandas, MatplotLib, Scikit-Learn, Pickle, TensorFlow, Keras
+
 Also has an ANN model with r2 score of ~0.465.
 
 ![Screenshot 2024-05-18 185251](https://github.com/DS-1090/HydHomePrice_Forecast/assets/126580400/c7f33bca-edef-4718-bbaa-16eba71116c8)
